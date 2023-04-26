@@ -11,12 +11,12 @@ pipeline{
          }
        }
 
-    stages('Test'){
+    stage('Test'){
         steps {
             sh "mvn test"
             }
     }
-    stages('Deploy'){
+    stage('Deploy'){
             steps {
                 sh "mvn heroku:deploy"
                 }
