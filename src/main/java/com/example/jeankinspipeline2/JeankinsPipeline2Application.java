@@ -13,7 +13,7 @@ public class JeankinsPipeline2Application {
         SpringApplication.run(JeankinsPipeline2Application.class, args);
     }
 
-    @GetMapping
+    @GetMapping("/")
     public String get(){
         return "Hello Jenkins";
     }

@@ -16,7 +16,8 @@ class JeankinsPipeline2ApplicationTests {
     @Autowired
     private MockMvc mockMvc;
     @Test
-    void shouldReturnDefaultMessage() throws Exception {
+    void shouldReturnDefaultMessage() throws Exception
+    {
         this.mockMvc.perform(get("/"))
                 .andDo(print())
                 .andExpect(status().isOk())
