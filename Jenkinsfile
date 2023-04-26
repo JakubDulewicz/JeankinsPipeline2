@@ -10,15 +10,16 @@ pipeline{
              sh "mvn clean compile"
          }
        }
-    }
-    stage('Test'){
+
+    stages('Test'){
         steps {
             sh "mvn test"
             }
     }
-    stage('Deploy'){
+    stages('Deploy'){
             steps {
                 sh "mvn heroku:deploy"
                 }
         }
+    }
 }
